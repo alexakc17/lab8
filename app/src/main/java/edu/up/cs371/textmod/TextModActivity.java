@@ -50,7 +50,7 @@ public class TextModActivity extends ActionBarActivity {
         // Set up the spinner so that it shows the names in the spinner array resources
         //
         // get spinner object
-        Spinner spinner = (Spinner)findViewById(R.id.spinner);
+        spinner = (Spinner)findViewById(R.id.spinner);
         // get array of strings
         String[] spinnerNames = getResources().getStringArray(R.array.spinner_names);
         // create adapter with the strings
@@ -84,6 +84,8 @@ public class TextModActivity extends ActionBarActivity {
     public void CopyNameClicked(View v) {
         String concat = editText.getText().toString() + spinner.getSelectedItem().toString();
         editText.setText(concat);
+    }
+
     //reverses the text
     public void reverseClicked(View v){
         CharSequence text = editText.getText().toString(); //get text from gui
