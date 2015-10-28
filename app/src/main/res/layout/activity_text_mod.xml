@@ -125,7 +125,9 @@
             android:id="@+id/button2"
             android:textSize="@dimen/button_font_size"
             android:textColor="@color/button_text_color"
-            android:background="@color/button_color" />
+            android:background="@color/button_color"
+            android:clickable="true"
+            android:onClick="CopyNameClicked" />
 
         <Space
             android:layout_width="0sp"
