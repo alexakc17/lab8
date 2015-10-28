@@ -79,6 +79,23 @@ public class TextModActivity extends ActionBarActivity {
 
     }
 
+    public void noSpacesClicked(View v){
+        CharSequence text = editText.getText();
+        String noSpacesText = "";
+        int start = 0;
+
+        for(int i = 0; i < text.length(); ++i){
+            if(text.charAt(i) == ' '){
+                noSpacesText += text.subSequence(start, i);
+                start = ++i;
+            }
+        }
+
+        noSpacesText += text.subSequence(start,text.length());
+
+        editText.setText(noSpacesText);
+    }
+
     public void CopyNameClicked(View v) {
         String concat = editText.getText().toString() + spinner.getSelectedItem().toString();
         editText.setText(concat);
