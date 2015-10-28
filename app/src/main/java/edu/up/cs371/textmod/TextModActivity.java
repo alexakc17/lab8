@@ -5,6 +5,7 @@ package edu.up.cs371.textmod;
  *
  * Allow text to be modified in simple ways with button-presses.
  */
+import android.content.DialogInterface;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -16,6 +17,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -27,6 +30,7 @@ public class TextModActivity extends ActionBarActivity {
 
     // instance variables containing widgets
     private ImageView imageView; // the view that shows the image
+    private EditText editText;
 
     /**
      * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -40,6 +44,7 @@ public class TextModActivity extends ActionBarActivity {
 
         // set instance variables for our widgets
         imageView = (ImageView)findViewById(R.id.imageView);
+        editText = (EditText) findViewById(R.id.editText);
 
         // Set up the spinner so that it shows the names in the spinner array resources
         //
@@ -72,7 +77,28 @@ public class TextModActivity extends ActionBarActivity {
 
         // define a listener for the spinner
         spinner.setOnItemSelectedListener(new MySpinnerListener());
+    }
 
+    //reverses the text
+    public void reverseClicked(View v){
+        CharSequence text = editText.getText().toString(); //get text from gui
+        int start = text.length()-1; //get index of last character in text
+        int end = text.length(); //get index of last character in text to stop at
+        String reversedText = ""; //hold reversed string
+
+        //stops when pass the first index of the string
+        while( start > -1){
+            reversedText += text.subSequence(start,end);
+            --start;
+            --end;
+        }
+
+        editText.setText(reversedText);
+    }
+
+    //sets all text to uppercase
+    public void upperClicked(View v){
+        editText.setText(editText.getText().toString().toUpperCase());
     }
 
     /**
