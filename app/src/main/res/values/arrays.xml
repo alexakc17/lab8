@@ -10,12 +10,14 @@
         <item>@mipmap/nuxoll</item>
         <item>@mipmap/vegdahl</item>
         <item>@mipmap/alexa_carr_google_result</item>
+        <item>@mipmap/morgan</item>
     </array>
 
     <string-array name="spinner_names">
         <item>Sleeping Kitten</item>
         <item>Dr. Andrew Nuxoll</item>
         <item>Dr. Steven Vegdahl</item>
+        <item>Sir Morgan Webber</item>
         <item>Alexa Carr</item>
     </string-array>
 
