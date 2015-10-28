@@ -9,6 +9,7 @@
         <item>@mipmap/kitten</item>
         <item>@mipmap/nuxoll</item>
         <item>@mipmap/vegdahl</item>
+        <item>@mipmap/nalani</item>
         <item>@mipmap/alexa_carr_google_result</item>
         <item>@mipmap/morgan</item>
     </array>
@@ -17,8 +18,9 @@
         <item>Sleeping Kitten</item>
         <item>Dr. Andrew Nuxoll</item>
         <item>Dr. Steven Vegdahl</item>
-        <item>Sir Morgan Webber</item>
+        <item>Nalani</item>
         <item>Alexa Carr</item>
+        <item>Sir Morgan Webber</item>
     </string-array>
 
 </resources>
