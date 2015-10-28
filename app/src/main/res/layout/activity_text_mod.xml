@@ -83,7 +83,8 @@
             android:id="@+id/button6"
             android:textSize="@dimen/button_font_size"
             android:textColor="@color/button_text_color"
-            android:background="@color/button_color" />
+            android:background="@color/button_color"
+            android:onClick="upperClicked" />
 
         <Space
             android:layout_width="0sp"
@@ -108,10 +109,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/reverse_button_text"
-            android:id="@+id/button4"
+            android:id="@+id/reverse_button"
             android:textSize="@dimen/button_font_size"
             android:textColor="@color/button_text_color"
-            android:background="@color/button_color" />
+            android:background="@color/button_color"
+            android:clickable="true"
+            android:onClick="reverseClicked" />
 
         <Space
             android:layout_width="0sp"
@@ -125,7 +128,9 @@
             android:id="@+id/button2"
             android:textSize="@dimen/button_font_size"
             android:textColor="@color/button_text_color"
-            android:background="@color/button_color" />
+            android:background="@color/button_color"
+            android:clickable="true"
+            android:onClick="CopyNameClicked" />
 
         <Space
             android:layout_width="0sp"
