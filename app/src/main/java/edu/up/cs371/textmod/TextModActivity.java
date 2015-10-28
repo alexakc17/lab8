@@ -50,8 +50,6 @@ public class TextModActivity extends ActionBarActivity {
         // Set up the spinner so that it shows the names in the spinner array resources
         //
         // get spinner object
-        spinner = (Spinner)findViewById(R.id.spinner);
-        // get array of strings
         String[] spinnerNames = getResources().getStringArray(R.array.spinner_names);
         // create adapter with the strings
         ArrayAdapter adapter = new ArrayAdapter<String>(this,
@@ -135,6 +133,24 @@ public class TextModActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /**
+     * Called by the Clear button to clear the text of the editText
+     * @param v - the Clear button
+     */
+    public void clearEditText(View v){
+        editText.setText("");
+    }
+
+    /**
+     * Called by the Lower button to convert the text in the edit text to lower case
+     * @param v - the Edit button
+     */
+    public void setEditTextLowerCase(View v){
+        String editTextContent = editText.getText().toString();
+        editText.setText(editTextContent.toLowerCase());
+    }
+
 
     /**
      * class that handles our spinner's selection events
