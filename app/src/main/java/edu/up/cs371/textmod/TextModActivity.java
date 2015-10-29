@@ -106,6 +106,23 @@ public class TextModActivity extends ActionBarActivity {
         editText.setText(editText.getText().toString().toUpperCase());
     }
 
+    public void altCaseClicked(View v) {
+        int i;
+        int length = editText.getText().toString().length();
+        String copy = "";
+
+        for (i = 0; i < length; i++) {
+            if (i % 2 ==0 ) {
+                copy += editText.getText().toString().toUpperCase().charAt(i);
+            }
+            else {
+                copy += editText.getText().toString().toLowerCase().charAt(i);
+            }
+        }
+                
+        editText.setText(copy);
+    }
+
     /**
      * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
      */
