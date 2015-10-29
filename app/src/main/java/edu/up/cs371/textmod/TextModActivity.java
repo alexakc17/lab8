@@ -21,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class TextModActivity extends ActionBarActivity {
 
@@ -121,6 +122,31 @@ public class TextModActivity extends ActionBarActivity {
     //sets all text to uppercase
     public void upperClicked(View v){
         editText.setText(editText.getText().toString().toUpperCase());
+    }
+
+    /**
+     * Removes the spaces from the editText
+     * @param v
+     */
+    public void insertRandomChar(View v){
+        String content = editText.getText().toString();
+        Random rand = new Random();
+
+        //Get a random character
+        char randChar = (char) rand.nextInt(256);
+
+        //Insert character at that location
+        if (content.equals("")){
+            content += randChar;
+        }
+        else{
+            //Generate random location
+            int index = rand.nextInt(content.length());
+            content = content.substring(0, index) + randChar + content.substring(index);
+        }
+
+
+        editText.setText(content);
     }
 
     /**
